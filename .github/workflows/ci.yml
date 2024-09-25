@@ -24,6 +24,12 @@ jobs:
 
     steps:
       - uses: "actions/checkout@v4.1.7"
-      - run: "cd ${{ matrix.task }}"
+
       - run: "make"
+        working-directory: ${{ matrix.task }}
+
       - run: "make lint"
+        working-directory: ${{ matrix.task }}
+
+      - run: "make clean"
+        working-directory: ${{ matrix.task }}
