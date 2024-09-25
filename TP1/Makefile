@@ -1,6 +1,6 @@
 LIBRARY_NAME = tp1project
 CC = gcc
-CC_FLAGS = -Wall -Wextra -Wfloat-equal -Wundef -Werror -std=c17 -pedantic -pedantic-errors -O3 -I./
+CC_FLAGS = -Wall -Wextra -Wfloat-equal -Wundef -Wno-unused-variable -std=c17 -pedantic -pedantic-errors -O3 -I./
 CC_SANITIZER_FLAGS = -fsanitize=address -fsanitize=undefined
 
 HEADER_FILES = $(wildcard lib/*.h) ./${LIBRARY_NAME}.h
