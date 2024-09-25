@@ -5,6 +5,7 @@
 Code réalisé par [Théo LUDWIG](https://theoludwig.fr) dans le cadre de la formation [Ingénieur en Informatique et Systèmes d'Information (SI), CNAM](https://www.itii-alsace.fr/formations/informatique-et-systemes-dinformation-le-cnam/), pour le module Algorithmie en C.
 
 - [TP n°1](./TP1)
+- [TP n°2](./TP2)
 
 ## Prérequis
 
@@ -13,7 +14,7 @@ Code réalisé par [Théo LUDWIG](https://theoludwig.fr) dans le cadre de la for
 - [GNU gcc](https://gcc.gnu.org/)
 - [GNU make](https://www.gnu.org/software/make/)
 - [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html)
-- [libcproject](https://github.com/theoludwig/libcproject) v4.3.0 (automatiquement installé avec `make`)
+- [libcproject](https://github.com/theoludwig/libcproject) v4.3.0 (automatiquement installé avec `make`, requis pour certains TP)
 
 ## Utilisation
 
