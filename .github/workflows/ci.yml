@@ -1,0 +1,29 @@
+name: "ci"
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint-editorconfig-checker:
+    runs-on: "ubuntu-latest"
+    steps:
+      - uses: "actions/checkout@v4.1.7"
+      - uses: "editorconfig-checker/action-editorconfig-checker@main"
+      - run: "editorconfig-checker"
+
+  ci:
+    runs-on: "ubuntu-latest"
+    container: "theoludwig/gcc-make-doxygen-ubuntu:latest"
+
+    strategy:
+      matrix:
+        task: [TP1]
+
+    steps:
+      - uses: "actions/checkout@v4.1.7"
+      - run: "cd ${{ matrix.task }}"
+      - run: "make"
+      - run: "make lint"
