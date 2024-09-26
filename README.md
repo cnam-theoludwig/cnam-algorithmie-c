@@ -14,7 +14,7 @@ Code réalisé par [Théo LUDWIG](https://theoludwig.fr) dans le cadre de la for
 - [GNU gcc](https://gcc.gnu.org/)
 - [GNU make](https://www.gnu.org/software/make/)
 - [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html)
-- [libcproject](https://github.com/theoludwig/libcproject) v4.3.0 (automatiquement installé avec `make`, requis pour certains TP)
+- [libcproject](https://github.com/theoludwig/libcproject) v5.0.0 (automatiquement installé avec `make`, requis pour certains TP)
 
 ## Utilisation
 
