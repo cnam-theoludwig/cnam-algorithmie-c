@@ -30,4 +30,10 @@ void array1D_rotate_right(int64_t *array, size_t array_size);
 // [1, 2, 3, 4, 5] => [2, 3, 4, 5, 1]
 void array1D_rotate_left(int64_t *array, size_t array_size);
 
+void array1D_random_fill_double(double *array, size_t array_size, double minimum_value, double maximum_value);
+
+void array_1D_print_double(double *array, size_t array_size);
+
+void array_1D_negative_positive(double *array, size_t array_size);
+
 #endif

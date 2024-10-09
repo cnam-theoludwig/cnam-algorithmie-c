@@ -28,6 +28,10 @@ Remarque on travaille ici par effet de bord ! (par opposition à fonctionel)
 
 ## Drapeau hollandais
 
+Le problème du drapeau hollandais est un problème de programmation, présenté par Edsger Dijkstra, qui consiste à réorganiser une collection d'éléments identifiés par leur couleur, sachant que seules trois couleurs sont présentes (par exemple, rouge, blanc, bleu, dans le cas du drapeau des Pays-Bas).
+
+Étant donné un nombre quelconque des balles rouges, blanches et bleues alignées dans n'importe quel ordre, le problème est à les réarranger dans le bon ordre: les rouges d'abord, puis les blanches, puis les bleues.
+
 - on utilisera ici un tableau de `char`
 - on utilisera `rand( )` [et `srand( )`] pour générer des nombres aléatoire
 - générer un tableau (taille 30) contenant aléatoirement les caractères `R W B`

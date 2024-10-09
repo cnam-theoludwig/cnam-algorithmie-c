@@ -107,3 +107,35 @@ void array1D_rotate_left(int64_t *array, size_t array_size) {
     last_element = element;
   }
 }
+
+void array1D_random_fill_double(double *array, size_t array_size, double minimum_value, double maximum_value) {
+  for (size_t index = 0; index < array_size; index++) {
+    array[index] = utils_random_double(minimum_value, maximum_value);
+  }
+}
+
+void array_1D_print_double(double *array, size_t array_size) {
+  printf("[");
+  for (size_t index = 0; index < array_size; index++) {
+    double element = array[index];
+    printf("%f", element);
+    bool is_last = index == array_size - 1;
+    if (!is_last) {
+      printf(", ");
+    }
+  }
+  printf("]\n");
+}
+
+void array_1D_negative_positive(double *array, size_t array_size) {
+  size_t negative_index = 0;
+  size_t positive_index = array_size - 1;
+  while (negative_index < positive_index) {
+    if (array[negative_index] < 0) {
+      negative_index += 1;
+    } else {
+      utils_swap_double(&array[negative_index], &array[positive_index]);
+      positive_index -= 1;
+    }
+  }
+}
