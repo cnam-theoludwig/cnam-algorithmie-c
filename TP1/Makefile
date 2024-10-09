@@ -12,7 +12,7 @@ LIB_OBJECTS = $(patsubst %.c, %.o, $(LIB_SOURCES))
 DEPENDENCIES_FOLDER = ../dependencies
 
 LIBCPROJECT_REPO = https://github.com/theoludwig/libcproject.git
-LIBCPROJECT_VERSION = v5.0.0
+LIBCPROJECT_VERSION = v5.1.0
 LIBCPROJECT_FOLDER = ${DEPENDENCIES_FOLDER}/libcproject
 LIBCPROJECT_PATH = ${LIBCPROJECT_FOLDER}/build/libcproject.a
 LIBCPROJECT_LIB = -l:${LIBCPROJECT_PATH}
