@@ -6,6 +6,7 @@ Code réalisé par [Théo LUDWIG](https://theoludwig.fr) dans le cadre de la for
 
 - [TP n°1](./TP1)
 - [TP n°2](./TP2)
+- [TP n°3](./TP3)
 
 ## Prérequis
 

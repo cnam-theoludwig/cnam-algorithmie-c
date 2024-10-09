@@ -20,7 +20,7 @@ jobs:
 
     strategy:
       matrix:
-        task: [TP1, TP2]
+        task: [TP1, TP2, TP3]
 
     steps:
       - uses: "actions/checkout@v4.2.1"
