@@ -7,8 +7,12 @@
 #include "tp3project.h"
 
 int main() {
-  printf("------ Arithmétique des pointeurs ------\n");
-  printf("------ Arithmétique des pointeurs ------\n");
+  utils_main_experimentation();
+  printf("\n");
 
+  utils_main_function_mutiple_results();
+  printf("\n");
+
+  string_main();
   return EXIT_SUCCESS;
 }
