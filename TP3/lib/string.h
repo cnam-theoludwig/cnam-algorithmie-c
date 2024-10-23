@@ -30,4 +30,12 @@ size_t string_get_length(const string_t string);
  */
 bool string_equals(const string_t string1, const string_t string2);
 
+bool string_palindrome(const string_t string);
+
+int string_find_substring(const string_t string, const string_t substring);
+
+char character_to_digit(const char character);
+
+int string_to_int(const string_t string);
+
 #endif

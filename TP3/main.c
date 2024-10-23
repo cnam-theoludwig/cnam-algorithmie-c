@@ -6,7 +6,7 @@
 
 #include "tp3project.h"
 
-int main() {
+int main(int argc, string_t* argv) {
   utils_main_experimentation();
   printf("\n");
 
@@ -14,5 +14,10 @@ int main() {
   printf("\n");
 
   string_main();
+  printf("\n");
+
+  calculator_main(argc, argv);
+  printf("\n");
+
   return EXIT_SUCCESS;
 }
