@@ -19,5 +19,8 @@ int main(int argc, string_t* argv) {
   calculator_main(argc, argv);
   printf("\n");
 
+  array_3D_main();
+  printf("\n");
+
   return EXIT_SUCCESS;
 }
