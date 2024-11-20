@@ -29,7 +29,7 @@
 
 ## Fibonacci
 
-- implanter fibonacci en récursifs en affichant la pile des appels (utiliser sprintf)
+- implémenter fibonacci en récursifs en affichant la pile des appels (utiliser sprintf)
 - Déduire de l'affichage de la pile que c'est inefficace (justifier)
 - écrire une version itérative
 - comparer le nombres d'additions
