@@ -8,6 +8,7 @@
 #include <stdlib.h>
 
 #include "linked_list.h"
+#include "linked_list_double.h"
 #include "types.h"
 
 /**
@@ -129,5 +130,7 @@ void terminal_print_string(void* value);
  * @param print_element
  */
 void terminal_print_linked_list(struct linked_list* linked_list, void (*print_element)(void*));
+
+void terminal_print_linked_list_double(struct linked_list_double* list, void (*print_function)(void*));
 
 #endif

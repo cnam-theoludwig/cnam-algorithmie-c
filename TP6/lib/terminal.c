@@ -92,3 +92,19 @@ void terminal_print_linked_list(struct linked_list* linked_list, void (*print_el
   }
   printf("NULL\n");
 }
+
+void terminal_print_linked_list_double(struct linked_list_double* list, void (*print_element)(void*)) {
+  if (list == NULL) {
+    errno = EINVAL;
+    perror("Error (terminal_print_double_linked_list)");
+    exit(EXIT_FAILURE);
+  }
+  struct linked_list_double_node* current = list->head;
+  while (current != NULL) {
+    void* element = current->data;
+    print_element(element);
+    printf(" <-> ");
+    current = current->next;
+  }
+  printf("NULL\n");
+}
