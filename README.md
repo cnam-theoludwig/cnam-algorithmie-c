@@ -9,6 +9,7 @@ Code réalisé par [Théo LUDWIG](https://theoludwig.fr) dans le cadre de la for
 - [TP n°3](./TP3)
 - [TP n°4](./TP4)
 - [TP n°5](./TP5)
+- [TP n°6](./TP6)
 
 ## Prérequis
 
