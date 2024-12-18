@@ -6,7 +6,7 @@
 #include <stdlib.h>
 
 /**
- * Une pile de float.
+ * Une pile de float. Pile => LIFO (Last In First Out).
  */
 struct Pile {
   /**

@@ -20,6 +20,12 @@ make
 
 # Compiler et exécuter le programme
 make run
+
+# Vérification du formatage du code avec ClangFormat
+make lint
+
+# Nettoyage des fichiers générés (compilation, exécutable, etc.)
+make clean
 ```
 
 ## Sujet

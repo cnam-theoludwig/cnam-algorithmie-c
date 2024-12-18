@@ -3,13 +3,13 @@
 struct Pile* new_pile(size_t taille_bloc, size_t nb_blocs) {
   struct Pile* pile = malloc(sizeof(struct Pile));
   if (pile == NULL) {
-    printf("Error (new_pile): malloc returned NULL\n");
+    printf("Erreur (new_pile): malloc a retourné NULL\n");
     return NULL;
   }
 
   pile->blocs = malloc(nb_blocs * sizeof(float*));
   if (pile->blocs == NULL) {
-    printf("Error (new_pile): malloc returned NULL\n");
+    printf("Erreur (new_pile): malloc a retourné NULL\n");
     free(pile);
     return NULL;
   }
@@ -27,7 +27,7 @@ struct Pile* new_pile(size_t taille_bloc, size_t nb_blocs) {
 
 bool push(struct Pile* pile, float valeur) {
   if (pile == NULL) {
-    printf("Error (push): Pile is NULL\n");
+    printf("Erreur (push): Pile est NULL\n");
     return false;
   }
 
@@ -35,14 +35,14 @@ bool push(struct Pile* pile, float valeur) {
   size_t index_in_block = pile->sommet_indice % pile->taille_bloc;
 
   if (bloc_index >= pile->nombre_max_blocs) {
-    printf("Error (push): Pile is full\n");
+    printf("Erreur (push): Pile pleine\n");
     return false;
   }
 
   if (bloc_index >= pile->nombre_blocs_alloues) {
     pile->blocs[bloc_index] = malloc(pile->taille_bloc * sizeof(float));
     if (pile->blocs[bloc_index] == NULL) {
-      printf("Error (push): malloc returned NULL\n");
+      printf("Erreur (push): malloc a retourné NULL\n");
       return false;
     }
     pile->nombre_blocs_alloues++;
@@ -55,7 +55,7 @@ bool push(struct Pile* pile, float valeur) {
 
 bool pop(struct Pile* pile) {
   if (pile == NULL || pile->sommet_indice == 0) {
-    printf("Error (pop): Pile is NULL or empty\n");
+    printf("Erreur (pop): Pile est NULL ou vide\n");
     return false;
   }
   pile->sommet_indice--;
@@ -68,7 +68,7 @@ bool empty(struct Pile* pile) {
 
 float head(struct Pile* pile) {
   if (pile == NULL || pile->sommet_indice == 0) {
-    printf("Error (head): Pile is NULL or empty\n");
+    printf("Erreur (head): Pile est NULL ou vide\n");
     return 0.0;
   }
   size_t bloc_index = (pile->sommet_indice - 1) / pile->taille_bloc;
@@ -78,7 +78,7 @@ float head(struct Pile* pile) {
 
 void dump(struct Pile* pile) {
   if (pile == NULL) {
-    printf("Error (dump): Pile is NULL\n");
+    printf("Erreur (dump): Pile est NULL\n");
     return;
   }
 
@@ -86,13 +86,15 @@ void dump(struct Pile* pile) {
   printf("  Nombre max blocs: %zu\n", pile->nombre_max_blocs);
   printf("  Taille bloc: %zu\n", pile->taille_bloc);
   printf("  Nombre blocs alloues: %zu\n", pile->nombre_blocs_alloues);
-  printf("  Sommet indice: %zu\n", pile->sommet_indice);
+  printf("  Sommet indice: %zu\n", pile->sommet_indice > 0 ? pile->sommet_indice - 1 : 0);
 
   for (size_t index1 = 0; index1 < pile->nombre_blocs_alloues; index1++) {
     printf("  Bloc %zu:\n", index1);
     for (size_t index2 = 0; index2 < pile->taille_bloc; index2++) {
       size_t index_global = index1 * pile->taille_bloc + index2;
-      if (index_global >= pile->sommet_indice) break;
+      if (index_global >= pile->sommet_indice) {
+        break;
+      }
       printf("    [%zu] = %f\n", index_global, pile->blocs[index1][index2]);
     }
   }
@@ -100,7 +102,7 @@ void dump(struct Pile* pile) {
 
 void clean(struct Pile* pile) {
   if (pile == NULL) {
-    printf("Error (clean): Pile is NULL\n");
+    printf("Erreur (clean): Pile est NULL\n");
     return;
   }
 
@@ -113,7 +115,7 @@ void clean(struct Pile* pile) {
 
 void destroy(struct Pile** pile) {
   if (pile == NULL || *pile == NULL) {
-    printf("Error (destroy): Pile is NULL\n");
+    printf("Erreur (destroy): Pile est NULL\n");
     return;
   }
 
@@ -125,7 +127,7 @@ void destroy(struct Pile** pile) {
 
 void shrink(struct Pile* pile) {
   if (pile == NULL) {
-    printf("Error (shrink): Pile is NULL\n");
+    printf("Erreur (shrink): Pile est NULL\n");
     return;
   }
 
@@ -141,18 +143,18 @@ void shrink(struct Pile* pile) {
 
 void change_bloc_size(struct Pile* pile, size_t nouvelle_taille) {
   if (pile == NULL) {
-    printf("Error (change_bloc_size): Pile is NULL\n");
+    printf("Erreur (change_bloc_size): Pile est NULL\n");
     return;
   }
 
   if (nouvelle_taille == 0) {
-    printf("Error (change_bloc_size): Nouvelle taille invalide\n");
+    printf("Erreur (change_bloc_size): Taille de bloc invalide\n");
     return;
   }
 
   struct Pile* nouvelle_pile = new_pile(nouvelle_taille, pile->nombre_max_blocs);
   if (nouvelle_pile == NULL) {
-    printf("Error (change_bloc_size): Impossible d'allouer la nouvelle pile\n");
+    printf("Erreur (change_bloc_size): Impossible de créer une nouvelle pile\n");
     return;
   }
 
