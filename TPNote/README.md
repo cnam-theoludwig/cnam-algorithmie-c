@@ -95,7 +95,8 @@ Pour trouver la bloc et l'indice dans le bloc à partir d'un indice global (comm
   - paramètres : pointeur de pointeur de pile !
 
 - `shrink` : libère les blocs inutilisés
-- paramètres : pointeur de pile
+
+  - paramètres : pointeur de pile
 
 - `change_bloc_size` : réorganise les données dans des blocs d'une autre taille
   - paramètres : taille des blocs
