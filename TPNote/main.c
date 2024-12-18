@@ -42,6 +42,13 @@ int main() {
   printf("\nDépilement de 2 valeurs...\n");
   pop(pile);
   pop(pile);
+  pop(pile);
+  pop(pile);
+  pop(pile);
+  pop(pile);
+  pop(pile);
+  pop(pile);
+  pop(pile);
 
   printf("\nContenu de la pile après dépilement :\n");
   dump(pile);
